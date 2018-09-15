@@ -17,7 +17,7 @@ public class MineralTest extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
-        v.init(telemetry);
+        v.init(hardwareMap, telemetry);
 
         waitForStart();
 

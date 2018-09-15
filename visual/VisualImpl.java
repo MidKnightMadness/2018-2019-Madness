@@ -5,14 +5,13 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.os.Environment;
 
-import com.vuforia.Frame;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.vuforia.PIXEL_FORMAT;
 import com.vuforia.Vuforia;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
-import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,10 +23,10 @@ import java.io.FileOutputStream;
 public class VisualImpl implements Visual {
 
     private VuforiaLocalizer vuforia;
-    Telemetry telemetry;
+    private Telemetry telemetry;
 
     @Override
-    public void init(Telemetry telemetry) {
+    public void init(HardwareMap hardwareMap, Telemetry telemetry) {
         this.telemetry = telemetry;
         // Init the VuforiaLocalizer parameters object with the camera View ID
         VuforiaLocalizer.Parameters params = new VuforiaLocalizer.Parameters(com.qualcomm.ftcrobotcontroller.R.id.cameraMonitorViewId);

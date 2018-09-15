@@ -10,18 +10,14 @@ import org.firstinspires.ftc.teamcode.common.Config;
  * Created by Gregory on 9/10/18.
  */
 
-/* ************************ */
-/* ***** DO NOT EDIT ****** */
-/* ************************ */
-
 @TeleOp(name = "Main Robot", group = "Main")
 public class Main extends OpMode {
 
-    private AbstractAssembly[] assemblies = new AbstractAssembly[1];
+    private AbstractAssembly[] assemblies = new AbstractAssembly[0];
 
     @Override
     public void init() {
-        assemblies[0] = Config.Drive.NEW();
+        //assemblies[0] = Config.Drive.NEW();
 
         for (AbstractAssembly assembly : assemblies) {
             assembly.resetStartTime();
