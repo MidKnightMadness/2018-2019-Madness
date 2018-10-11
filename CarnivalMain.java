@@ -35,7 +35,7 @@ public class CarnivalMain extends OpMode {
 
     @Override
     public void loop() {
-        left.setPower(-gamepad1.left_stick_y);
-        right.setPower(-gamepad1.right_stick_y);
+        left.setPower(gamepad1.left_stick_y);
+        right.setPower(gamepad1.right_stick_y);
     }
 }
